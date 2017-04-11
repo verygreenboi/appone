@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
 
 import { PagesModule } from './pages/pages.module';
+import { BackendModule } from './backend/backend.module';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     HttpModule,
     RouterModule.forRoot(routes, { useHash: false }),
 
-    PagesModule
+    PagesModule,
+    BackendModule
   ],
   providers: [],
   bootstrap: [AppComponent]

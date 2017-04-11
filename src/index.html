@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Appone</title>
@@ -7,11 +8,26 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/vendor.css">
+  <!-- Theme initialization -->
+  <script>
+    var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+      {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName) {
+      document.write('<link rel="stylesheet" id="theme-style" href="/assets/css/app-' + themeName + '.css">');
+    }
+    else {
+      document.write('<link rel="stylesheet" id="theme-style" href="/assets/css/app.css">');
+    }
+  </script>
 </head>
+
 <body>
   <app-root>Loading...</app-root>
 
-    <script src="assets/js/vendor.js"></script>
-    <!--<script src="assets/js/app.js"></script>-->  
+  <script src="assets/js/vendor.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
+
 </html>
